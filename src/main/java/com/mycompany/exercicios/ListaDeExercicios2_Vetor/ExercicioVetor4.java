@@ -10,7 +10,14 @@ package com.mycompany.exercicios.ListaDeExercicios2_Vetor;
  */
 public class ExercicioVetor4 {
     public static void main(String[] args) {
-    int[] numeros = new int[5];
+    int[] vetorOriginal = {1, 2, 3, 4, 5};
+    int tamanhoVetorOriginal = vetorOriginal.length;
+    int[] vetorCopia = new int[tamanhoVetorOriginal];
+    int tamanhoVetorOriginalZeroBased = tamanhoVetorOriginal -1;
     
-     }
+    for(int i = 0; i < tamanhoVetorOriginal; i++){
+        vetorCopia[i] = vetorOriginal[tamanhoVetorOriginalZeroBased - i];
+        System.out.println(vetorCopia[i]);
+    }
+    }
 }
